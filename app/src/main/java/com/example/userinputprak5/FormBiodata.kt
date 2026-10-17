@@ -155,29 +155,15 @@ fun FormBiodataScreen() {
                     )
 
                     // Subjudul Form
+                    Text(
+                        text = stringResource(id = R.string.form_subtitle),
+                        fontSize = dimensionResource(id = R.dimen.text_size_subtitle).value.sp,
+                        color = colorResource(id = R.color.grey_subtitle)
+                    )
+
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_small)))
 
                     // Row Nama Depan & Belakang
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.spacing_row))
-                    ) {
-                        OutlinedTextField(
-                            value = firstName,
-                            onValueChange = { firstName = it },
-                            label = { Text(stringResource(id = R.string.nama_depan)) },
-                            shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_input)),
-                            modifier = Modifier.weight(1f),
-                            singleLine = true
-                        )
-                        OutlinedTextField(
-                            value = lastName,
-                            onValueChange = { lastName = it },
-                            label = { Text(stringResource(id = R.string.nama_belakang)) },
-                            shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_input)),
-                            modifier = Modifier.weight(1f),
-                            singleLine = true
-                        )
-                    }
 
                     // Email dengan Validasi Error
                     OutlinedTextField(
