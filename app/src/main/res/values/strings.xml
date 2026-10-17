@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">QuestTugasUserInput</string>
     <string name="form_subtitle">Silahkan isi biodata Anda dibawah ini !!!</string>
+    <string name="nama_depan">Nama Depan</string>
 
-    <string name="nama_belakang">Nama Belakang</string>
     <string name="email">Email</string>
     <string name="error_email">Email harus menggunakan @gmail.com</string>
     <string name="tgl_lahir">Tgl Lahir</string>
