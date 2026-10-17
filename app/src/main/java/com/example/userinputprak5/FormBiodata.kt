@@ -147,15 +147,14 @@ fun FormBiodataScreen() {
                     verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.spacing_column))
                 ) {
                     // Judul Form
-
-                    // Subjudul Form
                     Text(
-                        text = stringResource(id = R.string.form_subtitle),
-                        fontSize = dimensionResource(id = R.dimen.text_size_subtitle).value.sp,
-                        color = colorResource(id = R.color.grey_subtitle)
+                        text = stringResource(id = R.string.form_title),
+                        fontSize = dimensionResource(id = R.dimen.text_size_title).value.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = colorResource(id = R.color.purple_title)
                     )
 
-                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_small)))
+                    // Subjudul Form
 
                     // Row Nama Depan & Belakang
                     Row(
