@@ -81,17 +81,40 @@ fun FormBiodataScreen() {
             (isAndroid || isUiUx || isWeb) // Syarat tambahan untuk Checkbox
 
     // Dialog Kalender
+    if (showDatePicker) {
+        DatePickerDialog(
+            onDismissRequest = { showDatePicker = false },
+            confirmButton = {
+                TextButton(onClick = {
+                    showDatePicker = false
+                    datePickerState.selectedDateMillis?.let { millis ->
+                        val formatter = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+                        tglLahir = formatter.format(Date(millis))
+                    }
+                }) {
+                    Text(stringResource(id = R.string.ok))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showDatePicker = false }) {
+                    Text(stringResource(id = R.string.batal))
+                }
+            }
+        ) {
+            DatePicker(state = datePickerState)
+        }
+    }
 
+    Scaffold(
+        modifier = Modifier.fillMaxSize()
+    ) { innerPadding ->
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+        ) {
             // 1. Gambar Background di bagian atas
-            Image(
-                painter = painterResource(id = R.drawable.bg_header),
-                contentDescription = stringResource(id = R.string.bg_desc),
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .fillMaxHeight(0.35f)
-                    .align(Alignment.TopCenter)
-            )
+
 
             // 2. Card Form dengan ukuran dari dimens.xml
             Box(
