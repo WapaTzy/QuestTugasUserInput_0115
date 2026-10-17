@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ukuran Border/Corner -->
+    <dimen name="corner_radius_card">32dp</dimen>
+    <dimen name="corner_radius_input">16dp</dimen>
+    <dimen name="corner_radius_button">12dp</dimen>
+
+    <!-- Ukuran Padding & Spacing -->
+    <dimen name="padding_card">24dp</dimen>
+    <dimen name="spacing_column">16dp</dimen>
+    <dimen name="spacing_row">12dp</dimen>
+    <dimen name="spacing_small">4dp</dimen>
+    <dimen name="spacing_medium">12dp</dimen>
+
+    <!-- Ukuran Tinggi/Lebar -->
+    <dimen name="height_button">48dp</dimen>
+
+    <!-- Ukuran Font (Teks) -->
+    <dimen name="text_size_title">26sp</dimen>
+    <dimen name="text_size_subtitle">12sp</dimen>
+    <dimen name="text_size_checkbox">12sp</dimen>
+</resources>
