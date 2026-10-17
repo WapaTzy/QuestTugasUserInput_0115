@@ -11,8 +11,8 @@
     <string name="skill_android">Android</string>
     <string name="skill_uiux">UI/UX</string>
     <string name="skill_web">Web</string>
+    <string name="btn_proceed">Proceed</string>
 
-    <string name="bg_desc">Background Image</string>
     <string name="icon_desc">Icon</string>
     <string name="ok">OK</string>
     <string name="batal">Batal</string>
