@@ -263,37 +263,14 @@ fun FormBiodataScreen() {
                     }
 
                     // Teks Skill
+                    Text(
+                        text = stringResource(id = R.string.pilih_skill),
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.fillMaxWidth()
+                    )
 
                     // Checkbox Row
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Checkbox(checked = isAndroid, onCheckedChange = { isAndroid = it })
-                            Text(
-                                text = stringResource(id = R.string.skill_android),
-                                fontSize = dimensionResource(id = R.dimen.text_size_checkbox).value.sp
-                            )
-                        }
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Checkbox(checked = isUiUx, onCheckedChange = { isUiUx = it })
-                            Text(
-                                text = stringResource(id = R.string.skill_uiux),
-                                fontSize = dimensionResource(id = R.dimen.text_size_checkbox).value.sp
-                            )
-                        }
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Checkbox(checked = isWeb, onCheckedChange = { isWeb = it })
-                            Text(
-                                text = stringResource(id = R.string.skill_web),
-                                fontSize = dimensionResource(id = R.dimen.text_size_checkbox).value.sp
-                            )
-                        }
-                    }
 
-                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_medium)))
 
                     // Tombol Proceed
                     val successMessage = stringResource(id = R.string.submit_success)
