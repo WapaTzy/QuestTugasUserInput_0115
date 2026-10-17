@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Ukuran Border/Corner -->
-    <dimen name="corner_radius_card">32dp</dimen>
-    <dimen name="corner_radius_input">16dp</dimen>
-    <dimen name="corner_radius_button">12dp</dimen>
 
     <!-- Ukuran Padding & Spacing -->
     <dimen name="padding_card">24dp</dimen>
