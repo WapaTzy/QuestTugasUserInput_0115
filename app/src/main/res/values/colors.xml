@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <color name="purple_title">#6A1B9A</color>
+    <color name="grey_subtitle">#757575</color>
+    <color name="grey_button">#E0E0E0</color>
+    <color name="white_bg">#FFFFFF</color>
 </resources>

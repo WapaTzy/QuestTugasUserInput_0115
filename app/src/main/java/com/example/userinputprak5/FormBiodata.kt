@@ -301,3 +301,37 @@ fun FormBiodataScreen() {
                     Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_medium)))
 
                     // Tombol Proceed
+                    val successMessage = stringResource(id = R.string.submit_success)
+                    Button(
+                        onClick = {
+                            Toast.makeText(context, successMessage, Toast.LENGTH_SHORT).show()
+                        },
+                        enabled = isFormValid,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(dimensionResource(id = R.dimen.height_button)),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colorResource(id = R.color.purple_title),
+                            disabledContainerColor = colorResource(id = R.color.grey_button)
+                        ),
+                        shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_button))
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.btn_proceed),
+                            color = Color.White,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun PreviewFormBiodata() {
+    UserInputPrak5Theme {
+        FormBiodataScreen()
+    }
+}
