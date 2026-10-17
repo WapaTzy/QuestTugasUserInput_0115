@@ -37,9 +37,7 @@ fun FormBiodataScreen() {
     val context = LocalContext.current
 
     // State variabel untuk menampung input user
-    var firstName by remember { mutableStateOf("") }
-    var lastName by remember { mutableStateOf("") }
-    var email by remember { mutableStateOf("") }
+
 
     // State khusus untuk Dropdown Experience
     var experience by remember { mutableStateOf("") }
