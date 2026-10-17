@@ -37,12 +37,11 @@ fun FormBiodataScreen() {
     val context = LocalContext.current
 
     // State variabel untuk menampung input user
-
+    var firstName by remember { mutableStateOf("") }
+    var lastName by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
 
     // State khusus untuk Dropdown Experience
-    var experience by remember { mutableStateOf("") }
-    var expanded by remember { mutableStateOf(false) }
-    val experienceOptions = listOf("0-1 Tahun", "1-3 Tahun", "3-5 Tahun", "5+ Tahun")
 
     // State khusus untuk DatePicker (Kalender)
     var tglLahir by remember { mutableStateOf("") }
