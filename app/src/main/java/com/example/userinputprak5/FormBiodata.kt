@@ -61,9 +61,6 @@ fun FormBiodataScreen() {
     )
 
     // State Checkbox
-    var isAndroid by remember { mutableStateOf(false) }
-    var isUiUx by remember { mutableStateOf(false) }
-    var isWeb by remember { mutableStateOf(false) }
 
     // Logika Validasi Email (Error jika sudah diketik tapi tidak diakhiri @gmail.com)
     val isEmailError = email.isNotEmpty() && !email.endsWith("@gmail.com")
