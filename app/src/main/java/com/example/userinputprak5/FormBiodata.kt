@@ -187,64 +187,26 @@ fun FormBiodataScreen() {
                     }
 
                     // Email dengan Validasi Error
-
+                    OutlinedTextField(
+                        value = email,
+                        onValueChange = { email = it },
+                        label = { Text(stringResource(id = R.string.email)) },
+                        isError = isEmailError,
+                        supportingText = {
+                            if (isEmailError) {
+                                Text(
+                                    text = stringResource(id = R.string.error_email),
+                                    color = MaterialTheme.colorScheme.error
+                                )
+                            }
+                        },
+                        shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_input)),
+                        modifier = Modifier.fillMaxWidth(),
+                        singleLine = true
+                    )
 
                     // Row Tgl Lahir & Dropdown Experience
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.spacing_row))
-                    ) {
-                        // Tgl Lahir
-                        OutlinedTextField(
-                            value = tglLahir,
-                            onValueChange = { },
-                            readOnly = true,
-                            label = { Text(stringResource(id = R.string.tgl_lahir)) },
-                            trailingIcon = {
-                                IconButton(onClick = { showDatePicker = true }) {
-                                    Icon(Icons.Default.DateRange, contentDescription = null)
-                                }
-                            },
-                            shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_input)),
-                            modifier = Modifier
-                                .weight(1f)
-                                .clickable { showDatePicker = true },
-                            singleLine = true
-                        )
 
-                        // Dropdown Experience
-                        ExposedDropdownMenuBox(
-                            expanded = expanded,
-                            onExpandedChange = { expanded = !expanded },
-                            modifier = Modifier.weight(1f)
-                        ) {
-                            OutlinedTextField(
-                                value = experience,
-                                onValueChange = {},
-                                readOnly = true,
-                                label = { Text(stringResource(id = R.string.experience)) },
-                                trailingIcon = {
-                                    ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded)
-                                },
-                                shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_input)),
-                                modifier = Modifier.menuAnchor()
-                            )
-                            ExposedDropdownMenu(
-                                expanded = expanded,
-                                onDismissRequest = { expanded = false }
-                            ) {
-                                experienceOptions.forEach { selectionOption ->
-                                    DropdownMenuItem(
-                                        text = { Text(selectionOption) },
-                                        onClick = {
-                                            experience = selectionOption
-                                            expanded = false
-                                        }
-                                    )
-                                }
-                            }
-                        }
-                    }
 
                     // Teks Skill
                     Text(
