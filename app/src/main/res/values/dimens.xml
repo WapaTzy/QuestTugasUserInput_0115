@@ -13,9 +13,7 @@
     <dimen name="spacing_medium">12dp</dimen>
 
     <!-- Ukuran Tinggi/Lebar -->
+    <dimen name="height_button">48dp</dimen>
 
     <!-- Ukuran Font (Teks) -->
-    <dimen name="text_size_title">26sp</dimen>
-    <dimen name="text_size_subtitle">12sp</dimen>
-    <dimen name="text_size_checkbox">12sp</dimen>
 </resources>
