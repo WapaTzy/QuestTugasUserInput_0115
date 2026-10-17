@@ -47,7 +47,8 @@ fun FormBiodataScreen() {
     val experienceOptions = listOf("0-1 Tahun", "1-3 Tahun", "3-5 Tahun", "5+ Tahun")
 
     // State khusus untuk DatePicker (Kalender)
-
+    var tglLahir by remember { mutableStateOf("") }
+    var showDatePicker by remember { mutableStateOf(false) }
 
     // Konfigurasi agar kalender tidak bisa memilih tanggal di masa depan
     val datePickerState = rememberDatePickerState(
