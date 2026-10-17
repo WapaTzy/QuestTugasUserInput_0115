@@ -72,41 +72,16 @@ fun FormBiodataScreen() {
     // 1. Semua form teks wajib terisi
     // 2. Email tidak boleh error (@gmail.com)
     // 3. Minimal salah satu skill (Checkbox) harus dipilih
-
+    val isFormValid = firstName.isNotEmpty() &&
+            lastName.isNotEmpty() &&
+            email.isNotEmpty() &&
+            !isEmailError &&
+            tglLahir.isNotEmpty() &&
+            experience.isNotEmpty() &&
+            (isAndroid || isUiUx || isWeb) // Syarat tambahan untuk Checkbox
 
     // Dialog Kalender
-    if (showDatePicker) {
-        DatePickerDialog(
-            onDismissRequest = { showDatePicker = false },
-            confirmButton = {
-                TextButton(onClick = {
-                    showDatePicker = false
-                    datePickerState.selectedDateMillis?.let { millis ->
-                        val formatter = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
-                        tglLahir = formatter.format(Date(millis))
-                    }
-                }) {
-                    Text(stringResource(id = R.string.ok))
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { showDatePicker = false }) {
-                    Text(stringResource(id = R.string.batal))
-                }
-            }
-        ) {
-            DatePicker(state = datePickerState)
-        }
-    }
 
-    Scaffold(
-        modifier = Modifier.fillMaxSize()
-    ) { innerPadding ->
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding)
-        ) {
             // 1. Gambar Background di bagian atas
             Image(
                 painter = painterResource(id = R.drawable.bg_header),
