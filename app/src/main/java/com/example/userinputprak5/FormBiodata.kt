@@ -114,30 +114,18 @@ fun FormBiodataScreen() {
                 .padding(innerPadding)
         ) {
             // 1. Gambar Background di bagian atas
-
-
-            // 2. Card Form dengan ukuran dari dimens.xml
-            Box(
+            Image(
+                painter = painterResource(id = R.drawable.bg_header),
+                contentDescription = stringResource(id = R.string.bg_desc),
+                contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .fillMaxHeight(0.75f)
-                    .align(Alignment.BottomCenter)
-                    .clip(
-                        RoundedCornerShape(
-                            topStart = dimensionResource(id = R.dimen.corner_radius_card),
-                            topEnd = dimensionResource(id = R.dimen.corner_radius_card)
-                        )
-                    )
-                    .background(colorResource(id = R.color.white_bg))
-                    .padding(dimensionResource(id = R.dimen.padding_card))
-            ) {
-                Column(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .verticalScroll(rememberScrollState()),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.spacing_column))
-                ) {
+                    .fillMaxHeight(0.35f)
+                    .align(Alignment.TopCenter)
+            )
+
+            // 2. Card Form dengan ukuran dari dimens.xml
+
                     // Judul Form
                     Text(
                         text = stringResource(id = R.string.form_title),
