@@ -66,19 +66,13 @@ fun FormBiodataScreen() {
     var isWeb by remember { mutableStateOf(false) }
 
     // Logika Validasi Email (Error jika sudah diketik tapi tidak diakhiri @gmail.com)
-
+    val isEmailError = email.isNotEmpty() && !email.endsWith("@gmail.com")
 
     // Validasi tombol Proceed:
     // 1. Semua form teks wajib terisi
     // 2. Email tidak boleh error (@gmail.com)
     // 3. Minimal salah satu skill (Checkbox) harus dipilih
-    val isFormValid = firstName.isNotEmpty() &&
-            lastName.isNotEmpty() &&
-            email.isNotEmpty() &&
-            !isEmailError &&
-            tglLahir.isNotEmpty() &&
-            experience.isNotEmpty() &&
-            (isAndroid || isUiUx || isWeb) // Syarat tambahan untuk Checkbox
+
 
     // Dialog Kalender
     if (showDatePicker) {
