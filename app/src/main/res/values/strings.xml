@@ -3,8 +3,7 @@
     <string name="form_subtitle">Silahkan isi biodata Anda dibawah ini !!!</string>
     <string name="nama_depan">Nama Depan</string>
     <string name="nama_belakang">Nama Belakang</string>
-
-    <string name="error_email">Email harus menggunakan @gmail.com</string>
+    <string name="email">Email</string>
     <string name="tgl_lahir">Tgl Lahir</string>
     <string name="experience">Experience</string>
     <string name="pilih_skill">Pilih Skill Anda :</string>
