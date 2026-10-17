@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QuestTugasUserInput</string>
+
     <string name="form_title">Form Biodata</string>
     <string name="form_subtitle">Silahkan isi biodata Anda dibawah ini !!!</string>
     <string name="nama_depan">Nama Depan</string>
