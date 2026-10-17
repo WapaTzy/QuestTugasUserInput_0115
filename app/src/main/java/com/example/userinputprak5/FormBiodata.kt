@@ -164,25 +164,30 @@ fun FormBiodataScreen() {
                     Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_small)))
 
                     // Row Nama Depan & Belakang
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.spacing_row))
+                    ) {
+                        OutlinedTextField(
+                            value = firstName,
+                            onValueChange = { firstName = it },
+                            label = { Text(stringResource(id = R.string.nama_depan)) },
+                            shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_input)),
+                            modifier = Modifier.weight(1f),
+                            singleLine = true
+                        )
+                        OutlinedTextField(
+                            value = lastName,
+                            onValueChange = { lastName = it },
+                            label = { Text(stringResource(id = R.string.nama_belakang)) },
+                            shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_input)),
+                            modifier = Modifier.weight(1f),
+                            singleLine = true
+                        )
+                    }
 
                     // Email dengan Validasi Error
-                    OutlinedTextField(
-                        value = email,
-                        onValueChange = { email = it },
-                        label = { Text(stringResource(id = R.string.email)) },
-                        isError = isEmailError,
-                        supportingText = {
-                            if (isEmailError) {
-                                Text(
-                                    text = stringResource(id = R.string.error_email),
-                                    color = MaterialTheme.colorScheme.error
-                                )
-                            }
-                        },
-                        shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_input)),
-                        modifier = Modifier.fillMaxWidth(),
-                        singleLine = true
-                    )
+
 
                     // Row Tgl Lahir & Dropdown Experience
                     Row(
